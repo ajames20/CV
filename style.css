@@ -140,7 +140,8 @@ main {
       margin-bottom: 0.5em;
       color: #30343F; }
     #summary .skills .darken {
-      color: #6f8597; }
+      color: #93A3B1;
+      font-size: 0.9em; }
     #summary .skills a {
       text-decoration: underline;
       padding: 0.9em; }

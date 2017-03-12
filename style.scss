@@ -200,7 +200,8 @@ main {
         }
 
         .darken {
-            color: darken($headings-color, 12%);
+            color: $headings-color;
+            font-size: 0.9em;
         }
 
         a {
