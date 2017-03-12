@@ -1,0 +1,301 @@
+$header-color: #2274A5;
+$header-font: #FAFAFF;
+$headings-color: #93A3B1;
+$body-color: #F2F7F2;
+$body-font: #30343F;
+$break-large: 990px;
+@import url( 'https://fonts.googleapis.com/css?family=Quicksand');
+
+* {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+}
+
+body {
+    background-color: $body-color;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9em;
+    font-family: 'Quicksand', sans-serif;
+    color: lighten($body-font, 6%);
+
+    p {
+        line-height: 1.5em;
+    }
+}
+
+header {
+    background: url('profile.jpg');
+    background: linear-gradient(lighten($header-color, 10%), $body-color);
+    color: $header-font;
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 240px;
+    align-items: center;
+
+    h1 {
+        font-size: 2em;
+        margin: 0.2em 0;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1em;
+    }
+
+    ul li {
+        text-align: center;
+        margin-bottom: 0.9em;
+        text-transform: uppercase;
+    }
+
+    i.fa {
+        font-size: 1em;
+        color: $header-font;
+    }
+
+    img {
+        display: inline-flex;
+        height: 70px;
+        width: 70px;
+        border-radius: 50%;
+        opacity: 0.8;
+        margin-top: 1em;
+        border: 0.9px double $header-font;
+    }
+    @media (min-width: $break-large) {
+        flex-direction: column;
+
+        h1 {
+            font-size: 3.5em;
+        }
+
+        ul {
+            order: 2;
+            display: flex;
+            flex-direction: row;
+        }
+
+        ul li {
+            color: darken($headings-color, 20%);
+            margin: 1em;
+        }
+
+        i.fa {
+            font-size: 1em;
+            color: darken($headings-color, 20%);
+        }
+
+        img {
+            display: inline-flex;
+            height: 130px;
+            width: 130px;
+        }
+    }
+}
+
+main {
+    flex: 1 0 auto;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+
+    h2 {
+        overflow: hidden;
+        text-align: center;
+        font-size: 1.2em;
+        color: $header-color;
+        margin-bottom: 1em;
+        line-height: 1.3em;
+    }
+
+    h2:after,
+    h2:before {
+        background-color: $headings-color;
+        content: "";
+        display: inline-block;
+        height: 1px;
+        position: relative;
+        vertical-align: middle;
+        width: 50%;
+    }
+
+    h2:before {
+        right: 0.5em;
+        margin-left: -50%;
+    }
+
+    h2:after {
+        left: 0.5em;
+        margin-right: -50%;
+    }
+    @media (min-width: $break-large) {
+        h2 {
+            font-size: 1.4em;
+        }
+    }
+}
+
+.wrapper {
+    margin: 0 auto;
+    padding: 2em;
+    @media (min-width: $break-large) {
+        width: 960px;
+    }
+}
+
+#education,
+#objective,
+#summary,
+#work-history {
+    margin: 1.5em 0;
+    width: 100%;
+
+    i.fa {
+        color: $headings-color;
+    }
+}
+
+#objective {
+    text-align: center;
+
+    p {
+        padding-top: 1em;
+    }
+}
+
+#summary {
+    width: 100%;
+
+    #summary-info {
+        margin-bottom: 1em;
+    }
+
+    .skills {
+        display: inline-flex;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+
+        p {
+            color: lighten($header-color, 30%);
+        }
+
+        ul {
+            margin-bottom: 0.8em;
+        }
+
+        li:first-of-type {
+            margin-top: 0.7em;
+        }
+
+        li {
+            margin-bottom: 0.5em;
+            color: lighten($headings-color, 5%);
+        }
+
+        .darken {
+            color: darken($headings-color, 12%);
+        }
+
+        a {
+            text-decoration: underline;
+            padding: 0.9em;
+        }
+
+        a:hover {
+            color: $header-color;
+        }
+        @media (min-width: $break-large) {
+            flex-direction: row;
+            justify-content: space-around;
+        }
+    }
+}
+
+#work-history {
+    @media (min-width: $break-large) {
+        .job {
+            flex-direction: row;
+            align-items: center;
+            margin: 1em 0;
+        }
+
+        h3 {
+            font-size: 1.2em;
+            width: 20%;
+        }
+
+        h4 {
+            align-self: center;
+            font-size: 0.9em;
+            margin-left: 4em;
+            padding: 0;
+            width: 20%;
+        }
+
+        p {
+            align-self: center;
+            margin-left: 4em;
+            width: 60%;
+        }
+    }
+}
+
+.job,
+.school {
+    display: flex;
+    flex-direction: column;
+    margin: 1em 0;
+
+    h3 {
+        font-size: 1.2em;
+        text-align: center;
+        margin: 0.7em 0;
+        color: lighten($header-color, 30%);
+    }
+
+    h4 {
+        font-size: 0.9em;
+        text-align: center;
+        margin-bottom: 0.7em;
+        color: $headings-color;
+    }
+}
+
+#education {
+    p {
+        text-align: center;
+    }
+    @media (min-width: $break-large) {
+        .school {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        h3 {
+            text-align: left;
+            flex: 2;
+        }
+
+        h4 {
+            order: 1;
+            text-align: right;
+        }
+
+        p {
+            flex: 2;
+            text-align: left;
+        }
+
+        .spacer {
+            padding-left: 8px;
+        }
+    }
+}

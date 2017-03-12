@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand");
+* {
+  box-sizing: border-box; }
+
+body,
+html {
+  height: 100%; }
+
+body {
+  background-color: #F2F7F2;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9em;
+  font-family: 'Quicksand', sans-serif;
+  color: #3d4250; }
+  body p {
+    line-height: 1.5em; }
+
+header {
+  background: url("profile.jpg");
+  background: linear-gradient(#2b92cf, #F2F7F2);
+  color: #FAFAFF;
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 240px;
+  align-items: center; }
+  header h1 {
+    font-size: 2em;
+    margin: 0.2em 0; }
+  header ul {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1em; }
+  header ul li {
+    text-align: center;
+    margin-bottom: 0.9em;
+    text-transform: uppercase; }
+  header i.fa {
+    font-size: 1em;
+    color: #FAFAFF; }
+  header img {
+    display: inline-flex;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    opacity: 0.8;
+    margin-top: 1em;
+    border: 0.9px double #FAFAFF; }
+  @media (min-width: 990px) {
+    header {
+      flex-direction: column; }
+      header h1 {
+        font-size: 3.5em; }
+      header ul {
+        order: 2;
+        display: flex;
+        flex-direction: row; }
+      header ul li {
+        color: #5d7081;
+        margin: 1em; }
+      header i.fa {
+        font-size: 1em;
+        color: #5d7081; }
+      header img {
+        display: inline-flex;
+        height: 130px;
+        width: 130px; } }
+
+main {
+  flex: 1 0 auto;
+  flex-direction: column;
+  align-items: center;
+  display: flex; }
+  main h2 {
+    overflow: hidden;
+    text-align: center;
+    font-size: 1.2em;
+    color: #2274A5;
+    margin-bottom: 1em;
+    line-height: 1.3em; }
+  main h2:after,
+  main h2:before {
+    background-color: #93A3B1;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%; }
+  main h2:before {
+    right: 0.5em;
+    margin-left: -50%; }
+  main h2:after {
+    left: 0.5em;
+    margin-right: -50%; }
+  @media (min-width: 990px) {
+    main h2 {
+      font-size: 1.4em; } }
+
+.wrapper {
+  margin: 0 auto;
+  padding: 2em; }
+  @media (min-width: 990px) {
+    .wrapper {
+      width: 960px; } }
+
+#education,
+#objective,
+#summary,
+#work-history {
+  margin: 1.5em 0;
+  width: 100%; }
+  #education i.fa,
+  #objective i.fa,
+  #summary i.fa,
+  #work-history i.fa {
+    color: #93A3B1; }
+
+#objective {
+  text-align: center; }
+  #objective p {
+    padding-top: 1em; }
+
+#summary {
+  width: 100%; }
+  #summary #summary-info {
+    margin-bottom: 1em; }
+  #summary .skills {
+    display: inline-flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%; }
+    #summary .skills p {
+      color: #7cbde4; }
+    #summary .skills ul {
+      margin-bottom: 0.8em; }
+    #summary .skills li:first-of-type {
+      margin-top: 0.7em; }
+    #summary .skills li {
+      margin-bottom: 0.5em;
+      color: #a2b0bc; }
+    #summary .skills .darken {
+      color: #6f8597; }
+    #summary .skills a {
+      text-decoration: underline;
+      padding: 0.9em; }
+    #summary .skills a:hover {
+      color: #2274A5; }
+    @media (min-width: 990px) {
+      #summary .skills {
+        flex-direction: row;
+        justify-content: space-around; } }
+
+@media (min-width: 990px) {
+  #work-history .job {
+    flex-direction: row;
+    align-items: center;
+    margin: 1em 0; }
+  #work-history h3 {
+    font-size: 1.2em;
+    width: 20%; }
+  #work-history h4 {
+    align-self: center;
+    font-size: 0.9em;
+    margin-left: 4em;
+    padding: 0;
+    width: 20%; }
+  #work-history p {
+    align-self: center;
+    margin-left: 4em;
+    width: 60%; } }
+
+.job,
+.school {
+  display: flex;
+  flex-direction: column;
+  margin: 1em 0; }
+  .job h3,
+  .school h3 {
+    font-size: 1.2em;
+    text-align: center;
+    margin: 0.7em 0;
+    color: #7cbde4; }
+  .job h4,
+  .school h4 {
+    font-size: 0.9em;
+    text-align: center;
+    margin-bottom: 0.7em;
+    color: #93A3B1; }
+
+#education p {
+  text-align: center; }
+@media (min-width: 990px) {
+  #education .school {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; }
+  #education h3 {
+    text-align: left;
+    flex: 2; }
+  #education h4 {
+    order: 1;
+    text-align: right; }
+  #education p {
+    flex: 2;
+    text-align: left; }
+  #education .spacer {
+    padding-left: 8px; } }
+
+/*# sourceMappingURL=style.css.map */
