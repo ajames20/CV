@@ -196,7 +196,7 @@ main {
 
         li {
             margin-bottom: 0.5em;
-            color: lighten($headings-color, 5%);
+            color: $headings-color;
         }
 
         .darken {
